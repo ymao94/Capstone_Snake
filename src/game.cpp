@@ -8,6 +8,7 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
   PlaceFood();
+  super_food_timer = SDL_GetTicks();
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
@@ -19,13 +20,14 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   int frame_count = 0;
   bool running = true;
 
+
   while (running) {
     frame_start = SDL_GetTicks();
 
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
     Update();
-    renderer.Render(snake, food);
+    renderer.Render(snake, food, super_food);
 
     frame_end = SDL_GetTicks();
 
@@ -55,11 +57,29 @@ void Game::PlaceFood() {
   while (true) {
     x = random_w(engine);
     y = random_h(engine);
+
     // Check that the location is not occupied by a snake item before placing
     // food.
     if (!snake.SnakeCell(x, y)) {
       food.x = x;
       food.y = y;
+      return;
+    }
+  }
+}
+
+
+void Game::PlaceSuperFood() {
+  int s_x, s_y;
+  while (true) {
+    s_x = random_w(engine);
+    s_y = random_h(engine);
+
+    // Check that the location is not occupied by a snake item or normal food before placing
+    // super food.
+    if (!snake.SnakeCell(s_x, s_y) && (food.x != s_x || food.y != s_y)) {
+      super_food.x = s_x;
+      super_food.y = s_y;
       return;
     }
   }
@@ -81,6 +101,23 @@ void Game::Update() {
     snake.GrowBody();
     snake.speed += 0.02;
   }
+
+  Uint32 present = SDL_GetTicks();
+
+  if (present - super_food_timer > 5000) {
+    PlaceSuperFood();
+    super_food_timer = present;
+  }
+
+   // Check if there's super food over here
+  if (super_food.x == new_x && super_food.y == new_y) {
+    score += 2;
+    PlaceSuperFood();
+    // Grow snake and increase speed.
+    snake.BoostBody();
+    snake.speed += 0.02;
+  }
+
 }
 
 int Game::GetScore() const { return score; }

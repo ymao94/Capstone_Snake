@@ -15,7 +15,11 @@ int main() {
   Controller controller;
   Game game(kGridWidth, kGridHeight);
   game.Run(controller, renderer, kMsPerFrame);
-  std::cout << "Game has terminated successfully!\n";
+  if (game.GetSize() > 15) {
+    std::cout << "That was a pretty long snake!\n";
+  }
+  else
+    std::cout << "I am not full yet!\n";
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
   return 0;

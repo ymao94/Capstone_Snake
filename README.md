@@ -44,3 +44,11 @@ This work is licensed under a
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+## Features in this project
+
+- The project uses control structures like if, for, and while;
+- The program accepts user inputs to control the game;
+- The project uses OOP techniques, including classes with public or private attributes and methods;
+- The project follows the Rule of five and uses smart pointers;
+  

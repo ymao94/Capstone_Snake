@@ -175,15 +175,21 @@ CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h \
  /home/yuanyuan/Documents/udacity/cpp/Capstone_Snake/src/snake.h \
- /usr/include/c++/7/iostream /usr/include/c++/7/ostream \
- /usr/include/c++/7/ios /usr/include/c++/7/iosfwd \
- /usr/include/c++/7/bits/stringfwd.h /usr/include/c++/7/bits/postypes.h \
- /usr/include/c++/7/cwchar /usr/include/c++/7/bits/char_traits.h \
- /usr/include/c++/7/cstdint /usr/include/c++/7/bits/localefwd.h \
+ /usr/include/c++/7/mutex /usr/include/c++/7/tuple \
+ /usr/include/c++/7/array /usr/include/c++/7/stdexcept \
+ /usr/include/c++/7/string /usr/include/c++/7/bits/stringfwd.h \
+ /usr/include/c++/7/bits/char_traits.h /usr/include/c++/7/bits/postypes.h \
+ /usr/include/c++/7/cwchar /usr/include/c++/7/cstdint \
+ /usr/include/c++/7/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
  /usr/include/c++/7/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/7/cctype \
- /usr/include/c++/7/bits/ios_base.h /usr/include/c++/7/ext/atomicity.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/7/iosfwd \
+ /usr/include/c++/7/cctype /usr/include/c++/7/bits/ostream_insert.h \
+ /usr/include/c++/7/bits/cxxabi_forced.h \
+ /usr/include/c++/7/bits/stl_function.h \
+ /usr/include/c++/7/backward/binders.h \
+ /usr/include/c++/7/bits/basic_string.h \
+ /usr/include/c++/7/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h \
@@ -195,23 +201,23 @@ CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h \
- /usr/include/c++/7/bits/locale_classes.h /usr/include/c++/7/string \
- /usr/include/c++/7/bits/ostream_insert.h \
- /usr/include/c++/7/bits/cxxabi_forced.h \
- /usr/include/c++/7/bits/stl_function.h \
- /usr/include/c++/7/backward/binders.h \
- /usr/include/c++/7/bits/basic_string.h /usr/include/c++/7/string_view \
- /usr/include/c++/7/bits/string_view.tcc \
+ /usr/include/c++/7/string_view /usr/include/c++/7/bits/string_view.tcc \
  /usr/include/c++/7/ext/string_conversions.h /usr/include/c++/7/cstdio \
  /usr/include/c++/7/cerrno /usr/include/errno.h \
  /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
  /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/c++/7/bits/basic_string.tcc \
- /usr/include/c++/7/bits/locale_classes.tcc \
- /usr/include/c++/7/system_error \
+ /usr/include/c++/7/bits/uses_allocator.h \
+ /usr/include/c++/7/bits/invoke.h /usr/include/c++/7/chrono \
+ /usr/include/c++/7/ratio /usr/include/c++/7/ctime \
+ /usr/include/c++/7/bits/parse_numbers.h /usr/include/c++/7/system_error \
  /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
- /usr/include/c++/7/stdexcept /usr/include/c++/7/streambuf \
+ /usr/include/c++/7/bits/std_mutex.h /usr/include/c++/7/iostream \
+ /usr/include/c++/7/ostream /usr/include/c++/7/ios \
+ /usr/include/c++/7/bits/ios_base.h \
+ /usr/include/c++/7/bits/locale_classes.h \
+ /usr/include/c++/7/bits/locale_classes.tcc /usr/include/c++/7/streambuf \
  /usr/include/c++/7/bits/streambuf.tcc \
  /usr/include/c++/7/bits/basic_ios.h \
  /usr/include/c++/7/bits/locale_facets.h /usr/include/c++/7/cwctype \

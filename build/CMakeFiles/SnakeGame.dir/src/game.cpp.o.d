@@ -212,14 +212,19 @@ CMakeFiles/SnakeGame.dir/src/game.cpp.o: \
  /usr/include/SDL2/SDL_version.h \
  /home/yuanyuan/Documents/udacity/cpp/Capstone_Snake/src/controller.h \
  /home/yuanyuan/Documents/udacity/cpp/Capstone_Snake/src/snake.h \
+ /usr/include/c++/7/mutex /usr/include/c++/7/tuple \
+ /usr/include/c++/7/array /usr/include/c++/7/stdexcept \
+ /usr/include/c++/7/bits/uses_allocator.h \
+ /usr/include/c++/7/bits/invoke.h /usr/include/c++/7/chrono \
+ /usr/include/c++/7/ratio /usr/include/c++/7/ctime \
+ /usr/include/c++/7/bits/parse_numbers.h /usr/include/c++/7/system_error \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
+ /usr/include/c++/7/bits/std_mutex.h \
  /home/yuanyuan/Documents/udacity/cpp/Capstone_Snake/src/renderer.h \
  /usr/include/c++/7/iostream /usr/include/c++/7/ostream \
  /usr/include/c++/7/ios /usr/include/c++/7/bits/ios_base.h \
  /usr/include/c++/7/bits/locale_classes.h \
- /usr/include/c++/7/bits/locale_classes.tcc \
- /usr/include/c++/7/system_error \
- /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
- /usr/include/c++/7/stdexcept /usr/include/c++/7/streambuf \
+ /usr/include/c++/7/bits/locale_classes.tcc /usr/include/c++/7/streambuf \
  /usr/include/c++/7/bits/streambuf.tcc \
  /usr/include/c++/7/bits/basic_ios.h \
  /usr/include/c++/7/bits/locale_facets.h /usr/include/c++/7/cwctype \

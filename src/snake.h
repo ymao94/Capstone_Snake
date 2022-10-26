@@ -2,7 +2,9 @@
 #define SNAKE_H
 
 #include <vector>
+#include <mutex>
 #include "SDL.h"
+
 
 class Snake {
  public:
@@ -13,6 +15,13 @@ class Snake {
         grid_height(grid_height),
         head_x(grid_width / 2),
         head_y(grid_height / 2) {}
+
+  Snake(const Snake &orig); // copy constructor
+  Snake& operator = (const Snake &orig); // copy assignment
+  Snake(Snake &&orig); // move constructor
+  Snake& operator = (Snake &&orig); // move assignment
+
+  ~Snake() = default; // destructor
 
   void Update();
 
@@ -37,6 +46,7 @@ class Snake {
   bool super_growing{false};
   int grid_width;
   int grid_height;
+  mutable std::mutex _mutex;
 };
 
 #endif

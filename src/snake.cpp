@@ -1,6 +1,79 @@
 #include "snake.h"
 #include <cmath>
 #include <iostream>
+#include <mutex>
+
+//copy constructor
+
+Snake::Snake(const Snake &orig) {
+  std::unique_lock<std::mutex> lock(orig._mutex);
+  speed = orig.speed;
+  grid_height = orig.grid_height;
+  grid_width = orig.grid_width;
+  size = orig.size;
+  alive = orig.alive;
+  head_x = orig.head_x;
+  head_y = orig.head_y;
+  body = orig.body;
+  growing = orig.growing;
+  super_growing = orig.super_growing;
+}
+
+//copy assignment
+
+Snake &Snake::operator=(const Snake &orig) {
+  	if (this == &orig) {
+      return *this;
+    }
+    std::unique_lock<std::mutex> lock(orig._mutex);
+    grid_height = orig.grid_height;
+    grid_width = orig.grid_width;
+    speed = orig.speed;
+    size = orig.size;
+    alive = orig.alive;
+    head_x = orig.head_x;
+    head_y = orig.head_y;
+    body = orig.body;
+    growing = orig.growing;
+    super_growing = orig.super_growing;
+    return *this;
+}
+
+// move constructor
+
+Snake::Snake(Snake &&orig) {
+    std::unique_lock<std::mutex> lock(orig._mutex);
+    grid_height = orig.grid_height;
+    grid_width = orig.grid_width;
+    speed = orig.speed;
+    size = orig.size;
+    alive = orig.alive;
+    head_x = orig.head_x;
+    head_y = orig.head_y;
+    body = std::move(orig.body);
+    growing = orig.growing;
+    super_growing = orig.super_growing;
+}
+
+// move assignment
+
+Snake &Snake::operator=(Snake &&orig) { 
+    if (this == &orig) {
+      return *this;
+    }
+    std::unique_lock<std::mutex> lock(orig._mutex);
+    grid_height = orig.grid_height;
+    grid_width = orig.grid_width;
+    speed = orig.speed;
+    size = orig.size;
+    alive = orig.alive;
+    head_x = orig.head_x;
+    head_y = orig.head_y;
+    body = std::move(orig.body);
+    growing = orig.growing;
+    super_growing = orig.super_growing;
+    return *this;
+}
 
 void Snake::Update() {
   SDL_Point prev_cell{

@@ -113,6 +113,7 @@ void Game::Update() {
   if (super_food.x == new_x && super_food.y == new_y) {
     score += 2;
     PlaceSuperFood();
+    super_food_timer = present;
     // Grow snake and increase speed.
     snake.BoostBody();
     snake.speed += 0.02;

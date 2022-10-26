@@ -1,12 +1,6 @@
-# CPPND: Capstone Snake Game Example
+# CPPND: Capstone Snake Game
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
-
-<img src="snake_game.gif"/>
-
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
-
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+This is a capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -30,6 +24,9 @@ In this project, you can build your own C++ application or extend this Snake gam
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
 
+## Code Structure
+
+The main file sets up the framework of the game. In the game files, the game loop and basic logic is defined. The user can manipulate the attributes of the snake object from the snake files through controller files, and renderer renders the game process on the screen.  
 
 ## CC Attribution-ShareAlike 4.0 International
 
@@ -47,8 +44,15 @@ This work is licensed under a
 
 ## Features in this project
 
+The main change is implementation of *super food* which is shown as a smaller blinking square. It only stays for a short time if the snake didn't manage to eat it. Every super food corresponds to two points. 
+
 - The project uses control structures like if, for, and while;
 - The program accepts user inputs to control the game;
 - The project uses OOP techniques, including classes with public or private attributes and methods;
-- The project follows the Rule of five and uses smart pointers;
+- The project follows the Rule of five and uses RAII (snake class);
+- Memory management: Some functions have parameters passed by references.
   
+
+## A running example
+
+<img src="snake_game.gif"/>
